@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PhotoUploadApplication</string>
+    <string name="btn_upload_photo">Upload Photo</string>
+    <string name="message_upload_success">Upload Successful! Media Url:</string>
+    <string name="error_message_upload_failed">Upload Failed!</string>
+    <string name="message_select_an_image">Select an Image First</string>
+</resources>
