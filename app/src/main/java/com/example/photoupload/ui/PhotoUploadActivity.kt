@@ -14,10 +14,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.example.photoupload.R
 import com.example.photoupload.databinding.ActivityPhotouploadBinding
-import com.example.photoupload.util.hide
 import dagger.hilt.android.AndroidEntryPoint
 import com.example.photoupload.util.snackbar
-import com.example.photoupload.util.show
 import kotlinx.android.synthetic.main.activity_photoupload.*
 
 @AndroidEntryPoint
