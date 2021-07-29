@@ -14,12 +14,6 @@ fun View.snackbar(message: String) {
     }.show()
 }
 
-fun ProgressBar.show() {
-    visibility = View.VISIBLE
-}
 
-fun ProgressBar.hide() {
-    visibility = View.GONE
-}
 
 
