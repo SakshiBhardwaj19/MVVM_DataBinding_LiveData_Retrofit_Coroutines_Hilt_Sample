@@ -16,6 +16,9 @@ interface UploadApi {
     suspend fun uploadPhoto(@Part file: MultipartBody.Part):Response<UploadPhotoResponse>
 
     companion object{
+
+        private const val BASE_URL="https://api-test.myapp.com/sample/api/"
+
         operator fun invoke(
             networkConnectionInterceptor: NetworkConnectionInterceptor
         ) : UploadApi{
@@ -26,7 +29,7 @@ interface UploadApi {
 
             return Retrofit.Builder()
                 .client(okkHttpclient)
-                .baseUrl("https://api-test.getwooapp.com/woo/api/")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(UploadApi::class.java)
