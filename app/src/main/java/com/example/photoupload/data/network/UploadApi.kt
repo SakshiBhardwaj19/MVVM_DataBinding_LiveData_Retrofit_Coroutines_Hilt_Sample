@@ -8,6 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
+import java.io.IOException
+import java.net.SocketTimeoutException
 
 interface UploadApi {
 
@@ -19,6 +21,7 @@ interface UploadApi {
 
         private const val BASE_URL="https://api-test.myapp.com/sample/api/"
 
+        @Throws(SocketTimeoutException::class)
         operator fun invoke(
             networkConnectionInterceptor: NetworkConnectionInterceptor
         ) : UploadApi{
