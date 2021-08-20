@@ -1,20 +1,14 @@
 package com.example.photoupload.ui
 
-import android.app.Application
-import android.database.Cursor
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+
 import android.net.Uri
-import android.os.Environment
-import android.view.View
+
 import androidx.lifecycle.*
-import com.example.photoupload.R
 import com.example.photoupload.data.network.UploadPhotoResponse
 import com.example.photoupload.data.PhotoRepository
 import com.example.photoupload.util.BitmapUtils
 import com.example.photoupload.util.Exceptions
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -61,9 +55,6 @@ class PhotoUploadViewModel @Inject constructor(
                 if (file != null) {
                     try {
                         val uploadPhotoResponse: UploadPhotoResponse?
-
-                        val quote = "The eagle has landed."
-                        println("The length of the quote is $quote.length")
 
                         withContext(Dispatchers.IO) {
                             uploadPhotoResponse = photoRepository.uploadPhoto(file)

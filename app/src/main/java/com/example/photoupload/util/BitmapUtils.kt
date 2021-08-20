@@ -67,7 +67,9 @@ class BitmapUtils @Inject constructor(private val fileUtils: FileUtils) {
 
     }
 
-
+    /**
+     * Function to calculate in sample size
+     */
     private fun calculateInSampleSize(
         options: BitmapFactory.Options,
         reqWidth: Int,
